@@ -1,0 +1,43 @@
+<view class="cu-bar search">
+  <view class='search-form round'>
+    <text class="icon-search"></text>
+    <input type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
+  </view>
+</view>
+
+<view class="cu-list grid col-5 no-border">
+  <view class="cu-item" wx:for="{{iconList}}" wx:key wx:if="{{index<10}}">
+    <view class='icon-{{item.icon}} text-{{item.color}}'>
+      <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
+        <block wx:if="{{item.badge!=1}}">{{item.badge>99?'99+':item.badge}}</block>
+      </view>
+    </view>
+    <text>{{item.name}}</text>
+  </view>
+</view>
+<swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{4}}" wx:key>
+    <image src="https://image.weilanwl.com/img/4x3-{{index+1}}.jpg" mode='aspectFill'></image>
+  </swiper-item>
+</swiper>
+
+<view class="cu-bar margin-top">
+  <view class='action'>
+    <text>宫格列表</text>
+  </view>
+</view>
+<view class='cu-item'>
+  <view class="cu-avatar radius lg" style="background-image:url(https://image.weilanwl.com/img/square-3.jpg);"></view>
+      <view class='content'>
+        <view>喵星人互动群</view>
+        <view class='text-gray text-sm'>喵星酱：喵喵喵！</view>
+      </view>
+</view>
+<view class="bg-white" style='padding:5px;'>
+  <view class="flex">
+    <view class='flex-sub bg-grey padding-sm margin-xs radius'>
+      
+    </view>
+    <view class='flex-sub bg-grey padding-sm margin-xs radius'>1</view>
+  </view>
+</view>
